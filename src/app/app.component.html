@@ -2,12 +2,8 @@
   <form>
     <label>Email</label>
     <input [formControl]="emailControl">
-    <label *ngIf="emailControl.errors?.required">Username nécessaire</label>
-    <label *ngIf="emailControl.errors?.email">
-      Utilisateur invalide
-    </label>
-    <label *ngIf="emailControl.errors?.emailExists">
-      Utilisateur existe
-    </label>
+    <label *ngIf="emailControl.errors?.required">Email nécessaire</label>
+    <label *ngIf="emailControl.errors?.email">Email invalide</label>
+    <label *ngIf="emailControl.errors?.emailExists">Email existe déjà</label>
   </form>
 </div>
